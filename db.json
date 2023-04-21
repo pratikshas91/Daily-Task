@@ -1,0 +1,65 @@
+{
+  "user": [
+    {
+      "id": 1
+    },
+    {
+      "fullname": "pratikshaaa",
+      "email": "ps@gmail.com",
+      "password": "Pass@123",
+      "mobile": "1992222222",
+      "address": "pune",
+      "dob": "2023-04-03T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "fullname": "admin admin",
+      "email": "admin@gmail.com",
+      "password": "Admin@12",
+      "mobile": "9887787777",
+      "address": "pune",
+      "dob": "2023-04-02T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "fullname": "user user",
+      "email": "user@gmail.com",
+      "password": "User@12",
+      "mobile": "07765544545",
+      "address": "sr no. 50, m.g. road,",
+      "dob": "2023-04-04T18:30:00.000Z",
+      "id": 4
+    },
+   
+    {
+      "fullname": "ashwini lohar",
+      "email": "ashwi@gmail.com",
+      "password": "As@12345",
+      "mobile": "07765544545",
+      "address": "sr no. 50, m.g. road,",
+      "dob": "2023-04-02T18:30:00.000Z",
+      "id": 6
+    }
+  ],
+  "saveTask": [
+
+      {
+    
+       "date": "04/18/2023",
+    
+       "task": "I have completed user module",
+    
+       "status": "Completed",
+    
+       "associateName": "rahul",
+    
+       "associateExp": "4years",
+    
+       "skills": "ML, AI",
+    
+       "assId": 1,
+    
+       "id": 1
+    
+      }]
+}

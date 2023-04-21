@@ -1,0 +1,74 @@
+<h2>
+   <span style="margin-left: 45%;margin-top: 10%;">Register Here!!</span>
+  </h2>
+  <mat-card class=" card">
+     <mat-card-content>
+        <form class="my-form" [formGroup]="userform" (ngSubmit)="submit()">
+            
+             <mat-form-field class="full-width">
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-label>Full Name</mat-label>
+                <input autofocus type="text"  matInput  placeholder="Full Name"  formControlName="fullname">
+              
+             </mat-form-field>  
+             <div style="color:red;" *ngIf="userform.controls['fullname'].touched && userform.controls['fullname'].invalid">
+               <span *ngIf="userform.controls['fullname'].hasError('required')">Name should contain minimum 10 charactors </span>
+               <span *ngIf="userform.controls['fullname'].hasError('pattern')">Enter valid name</span>
+               <span *ngIf="userform.controls['fullname'].hasError('minLength()')">Minimum 10 charactors required</span>
+   
+           </div>
+           <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <mat-icon matSuffix>email</mat-icon>
+              <input autofocus type="email" matInput  placeholder="Email" formControlName="email">
+           </mat-form-field>
+           <div style="color:red;" *ngIf="userform.controls['email'].touched && userform.controls['email'].invalid">
+            <span *ngIf="userform.controls['email'].hasError('email')">Please enter valid email id.</span>
+            
+        </div>
+           <mat-form-field class="full-width">
+              <mat-label>Password</mat-label>
+              <mat-icon matSuffix>visibility_off</mat-icon>
+              <input  autofocus type="password" matInput  placeholder="Password" class="form-control" id="password" required formControlName="password">
+             
+           </mat-form-field>
+           <div style="color:red;" *ngIf="userform.controls['password'].touched && userform.controls['password'].invalid">
+            <span *ngIf="userform.controls['password'].hasError('pattern')">Password should contain 7 charactros<br>one uppercase<br>one special charactor<br>one number</span>
+
+        </div>
+          
+           <mat-form-field class="full-width">
+            <mat-label>Date Of Birth</mat-label>
+            <input autofocus type="text" matInput [matDatepicker]="picker" placeholder="Choose a date"  formControlName="dob">
+<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+<mat-datepicker #picker></mat-datepicker>
+
+</mat-form-field>
+           <mat-form-field class="full-width">
+            <mat-label>Mobile Number</mat-label>
+            <mat-icon matSuffix>call</mat-icon>
+            <input autofocus type="text"  matInput  placeholder="Mobile Number" formControlName="mobile">
+         </mat-form-field>
+         <div style="color:red;" *ngIf="userform.controls['mobile'].touched && userform.controls['mobile'].invalid">
+            <span *ngIf="userform.controls['mobile'].hasError('pattern')">Enter Valid Mobile Number</span>
+
+        </div>
+         <mat-form-field class="full-width">
+            <mat-label>Address</mat-label>
+            <mat-icon matSuffix>home</mat-icon>
+            <input autofocus type="text" matInput  placeholder="address" formControlName="address" (input)="taskLength()">
+         </mat-form-field>
+
+         <span style="color:rgb(239, 19, 34); margin-left: 90%;" *ngIf="taskLenCount >0">{{taskLenCount}}/10</span>
+         <span *ngIf="userform.controls['address'].hasError('minLength()')">Minimum 10 charactors required</span>
+   
+         <mat-card-actions>
+            <button mat-raised-button color="primary" style="margin-left: 40%;">Register</button>
+         </mat-card-actions>
+
+      </form>
+     </mat-card-content>
+    
+  
+  </mat-card>
+

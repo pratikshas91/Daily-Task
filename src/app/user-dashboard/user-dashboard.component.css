@@ -1,0 +1,51 @@
+ /* mat-form-field {
+    display: block;
+  }
+
+  mat-card {
+    max-width: 50%;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    display: flex;
+    flex:row;
+    margin-bottom:15px
+  }
+  
+  .mat-mdc-card-title, .mat-mdc-card-subtitle {
+    display: block;
+    margin: 0;
+    color: #6ce4b9eb;
+  } */
+
+  .my-form{
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 15%;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .card{
+   margin: 2% 20% 5% 20%;
+   background-color: wheat;
+   /* height: 85%;; */
+  }
+
+  mat-form-field {
+    display: flex;
+    /* margin-bottom:15px */
+  }
+
+  form {
+    display: block;
+    /* justify-tracks:center; */
+  }
+
+  .activebutton 
+{
+  background-color: rgb(51, 51, 51);
+  color: white;
+}

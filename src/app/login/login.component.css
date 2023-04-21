@@ -1,0 +1,19 @@
+.my-form{
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+ .full-width{
+  width:80%
+ }
+  .card{
+   margin: 2% 30% 5% 30%;
+  color: grey;
+   background-color: bisque;
+   border-radius: 5%;
+  }
+  a:hover {
+    color: red;
+  }

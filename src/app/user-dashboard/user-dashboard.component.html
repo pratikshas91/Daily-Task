@@ -1,0 +1,71 @@
+<mat-toolbar>
+      <button mat-button (click)="openList()">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+    </button>
+    <button mat-button (click)="openList()">
+      <mat-icon>list</mat-icon>
+      <span>My Task List</span>
+  </button>
+  <button mat-button (click)="addTaskTab()">
+    <mat-icon>note_add</mat-icon>
+    <span>Add Task</span>
+  </button>
+  <button mat-button style="margin-left:60%;" [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+    <span>{{username}}</span>
+</button>
+<mat-menu #menu="matMenu">
+  <!-- <button mat-menu-item (click)="userProfile()">Profile</button> -->
+ 
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    Logout</button>
+</mat-menu>
+  </mat-toolbar>
+
+  <!-- <app-add-task *ngIf="isAddTask"></app-add-task> -->
+  <app-user-list *ngIf="isList"></app-user-list>
+  <mat-card class="card" *ngIf="isAddTask">
+    <mat-card-content>
+                    <mat-card-title style="text-align: center;">Add Task</mat-card-title>
+        <form [formGroup]="taskForm" (ngSubmit)="addTask()" class="my-form">
+            <mat-error *ngIf="isError" >Some thing went wrong!
+              </mat-error>
+              <mat-form-field appearance="fill" class="mat-fields">
+                <mat-label>Select Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date" required>
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="taskForm.controls['date']?.touched && taskForm.controls['date']?.invalid">
+                    <span *ngIf=" taskForm.controls?.['date']?.errors?.['required']">Task Date is mandatory.</span>
+                  </mat-error>
+              </mat-form-field>
+            <mat-form-field>
+                <mat-label>Enter Task</mat-label>
+                <input matInput type="text" formControlName="task"  placeholder="Enter Task" (input)="taskLength()">
+                <mat-error *ngIf="taskForm.controls?.['task']?.touched && taskForm.controls?.['task']?.invalid">
+                    <span *ngIf="taskForm.controls?.['task']?.errors?.['required']">Task is required</span>
+                <span *ngIf="taskForm.controls?.['task']?.hasError('maxlength')">Task must not be more than 200 characters</span>
+                </mat-error>
+            </mat-form-field>
+            <div>
+            <span style="color:rebeccapurple" *ngIf="taskLenCount >0">charectors count: {{taskLenCount}} of 200</span>
+        </div>
+            <mat-form-field>
+                <mat-label>Select Status</mat-label>
+                <mat-select formControlName="status" required >
+                    <mat-option value="Pending">Pending</mat-option>
+                    <mat-option  value="Completed">Inprogress</mat-option>
+                    <mat-option  value="Completed">Completed</mat-option>
+                  </mat-select>
+                <mat-error *ngIf="taskForm.controls?.['status']?.touched && taskForm.controls?.['status']?.invalid">
+                    <span *ngIf="taskForm.controls?.['status']?.errors?.['required']">Status is required</span>
+                </mat-error>
+            </mat-form-field>
+                <button mat-raised-button color="primary" style="float: right;">Submit</button>
+                <button mat-raised-button reset style="float: left;">Reset</button>
+        </form>
+    </mat-card-content>
+    </mat-card>

@@ -1,0 +1,27 @@
+<h2>
+    <span style="margin-left: 45%;margin-top: 10%;">Login Here!!</span>
+   </h2>
+  <mat-card class=" card">
+     <mat-card-content>
+        <form class="my-form" [formGroup]="loginForm" (ngSubmit)="logIn()">
+           <mat-form-field class="full-width" >
+              <mat-label>Email</mat-label>
+              <mat-icon matSuffix>email</mat-icon>
+              <input type="email" matInput  placeholder="Email" formControlName="email" >
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Password</mat-label>
+              <mat-icon matSuffix>visibility_off</mat-icon>
+              <input  typr="password" matInput  placeholder="Password" formControlName="password">
+           </mat-form-field>
+           
+           <mat-card-actions>
+            <button mat-raised-button color="primary" style="margin-left: 20%;width: 40%;">Login</button>
+         </mat-card-actions><br><br>
+         <a routerLink="/register" style="margin-left: 20%;">New User? Register here!</a><br>
+        </form>
+        <!-- <a href="" style="margin-left: 50%;">Forgot password ?</a> -->
+     </mat-card-content>
+    
+  </mat-card>
+<router-outlet></router-outlet>

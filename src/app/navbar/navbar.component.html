@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+    <div style="margin-left: 90%;">
+    <mat-icon matSuffix>account_circle</mat-icon>
+     <a *ngIf="!isLoggedIn" routerLink="/login" mat-button >Login</a>
+   
+     <a *ngIf="isLoggedIn"   (click)="logout()"  mat-button >Logout</a>
+   
+    </div>
+   </mat-toolbar>

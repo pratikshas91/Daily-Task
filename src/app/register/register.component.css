@@ -1,0 +1,15 @@
+.my-form{
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 15%;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .card{
+   margin: 2% 20% 5% 20%;
+  color: grey;
+   background-color: bisque;
+  }
+ 
