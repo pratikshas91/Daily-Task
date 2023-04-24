@@ -61,7 +61,23 @@
 
          <span style="color:rgb(239, 19, 34); margin-left: 90%;" *ngIf="taskLenCount >0">{{taskLenCount}}/10</span>
          <span *ngIf="userform.controls['address'].hasError('minLength()')">Minimum 10 charactors required</span>
-   
+         <mat-form-field class="full-width">
+            <mat-label>Skills</mat-label>
+            <mat-icon matSuffix>description</mat-icon>
+            <input autofocus type="text" matInput  placeholder="Skills" formControlName="skill">
+         </mat-form-field>
+         <div style="color:red;" *ngIf="userform.controls['skill'].touched && userform.controls['skill'].invalid">
+            
+        </div>
+         <mat-form-field class="full-width">
+            <mat-label>Experience</mat-label>
+            <mat-icon matSuffix>work</mat-icon>
+            
+            <input autofocus type="text" matInput  placeholder="Experience" formControlName="experience">
+         </mat-form-field>
+         <div style="color:red;" *ngIf="userform.controls['experience'].touched && userform.controls['experience'].invalid">
+            
+        </div>
          <mat-card-actions>
             <button mat-raised-button color="primary" style="margin-left: 40%;">Register</button>
          </mat-card-actions>

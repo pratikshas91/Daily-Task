@@ -34,7 +34,9 @@ export class RegisterComponent {
         ] ],
           mobile: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
           address: ['', [Validators.required,Validators.minLength(10)] ],
-          dob: ['', [Validators.required] ]
+          dob: ['', [Validators.required] ],
+          skill: ['', [Validators.required] ],
+          experience: ['', [Validators.required] ]
           
         }
   

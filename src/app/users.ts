@@ -5,7 +5,8 @@ export class users{
     password!:string;
    gender!:string;
     dob!:Date;
-    skills!:string;
+    skill!:string;
+    experience!:number;
 
     
     

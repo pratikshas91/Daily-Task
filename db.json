@@ -30,7 +30,6 @@
       "dob": "2023-04-04T18:30:00.000Z",
       "id": 4
     },
-   
     {
       "fullname": "ashwini lohar",
       "email": "ashwi@gmail.com",
@@ -39,27 +38,29 @@
       "address": "sr no. 50, m.g. road,",
       "dob": "2023-04-02T18:30:00.000Z",
       "id": 6
+    },
+    {
+      "fullname": "ashwini lohar",
+      "email": "ashwmmi@gmail.com",
+      "password": "As@12345",
+      "mobile": "07765544545",
+      "address": "sr no. 50, m.g. road,",
+      "dob": "2023-04-04T18:30:00.000Z",
+      "skill": "aadsd",
+      "experience": "1212122222",
+      "id": 7
     }
   ],
   "saveTask": [
-
-      {
-    
-       "date": "04/18/2023",
-    
-       "task": "I have completed user module",
-    
-       "status": "Completed",
-    
-       "associateName": "rahul",
-    
-       "associateExp": "4years",
-    
-       "skills": "ML, AI",
-    
-       "assId": 1,
-    
-       "id": 1
-    
-      }]
+    {
+      "date": "04/18/2023",
+      "task": "I have completed user module",
+      "status": "Completed",
+      "associateName": "rahul",
+      "associateExp": "4years",
+      "skills": "ML, AI",
+      "assId": 1,
+      "id": 1
+    }
+  ]
 }

@@ -4,6 +4,7 @@ import { UserServiceService } from '../user-service.service';
 
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent {
   loginForm!:FormGroup;
 
 
-constructor(private route:Router, private _fb: FormBuilder, private _service:UserServiceService,private http:HttpClient,private rout:Router){
+constructor(private _snackBar: MatSnackBar,private route:Router, private _fb: FormBuilder, private _service:UserServiceService,private http:HttpClient,private rout:Router){
 
 }
   ngOnInit(): void {
@@ -47,6 +48,7 @@ console.log("Inside login")
         this._service.loginUser(user);
         localStorage.setItem('user',user.email)
       
+        
         alert("Success")
         this.rout.navigate(['/admin']);
         this._service.loginSubject.next(true);
